@@ -1,6 +1,4 @@
-// let user
-// const player1 = 1
-// const player2 = 2
+
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 let currentPlayer = 'O'
 
@@ -12,9 +10,6 @@ const takeTurn = () => {
   }
   return currentPlayer
 }
-// $('#box0').on('click',
-// const onClick0 = $('#box0').on('click', (event) => {
-// add ) at end
 
 const onClick0 = event => {
   $(event.target).text(currentPlayer)

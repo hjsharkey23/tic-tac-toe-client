@@ -17,15 +17,3 @@ $(() => {
   $('#box7').on('click', events.onClick7)
   $('#box8').on('click', events.onClick8)
 })
-
-// const gameBoard = ['', '', '', '', '', '', '', '', '']
-// let currentPlayer = 'O'
-//
-// const takeTurn = () => {
-//   if (currentPlayer === 'O') {
-//     currentPlayer = 'X'
-//   } else {
-//     currentPlayer = 'O'
-//   }
-//   return currentPlayer
-// }
