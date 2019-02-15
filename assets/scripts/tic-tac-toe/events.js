@@ -12,62 +12,65 @@ const takeTurn = () => {
   }
   return currentPlayer
 }
+// $('#box0').on('click',
+// const onClick0 = $('#box0').on('click', (event) => {
+// add ) at end
 
-const onClick0 = $('#box0').on('click', (event) => {
+const onClick0 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[0] = currentPlayer
   takeTurn()
   console.log(gameBoard)
   console.log(event.target)
-})
-const onClick1 = $('#box1').on('click', (event) => {
+}
+const onClick1 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[1] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick2 = $('#box2').on('click', (event) => {
+}
+const onClick2 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[2] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick3 = $('#box3').on('click', (event) => {
+}
+const onClick3 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[3] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick4 = $('#box4').on('click', (event) => {
+}
+const onClick4 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[4] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick5 = $('#box5').on('click', (event) => {
+}
+const onClick5 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[5] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick6 = $('#box6').on('click', (event) => {
+}
+const onClick6 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[6] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick7 = $('#box7').on('click', (event) => {
+}
+const onClick7 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[7] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
-const onClick8 = $('#box8').on('click', (event) => {
+}
+const onClick8 = event => {
   $(event.target).text(currentPlayer)
   gameBoard[8] = currentPlayer
   takeTurn()
   console.log(gameBoard)
-})
+}
 
 module.exports = {
   onClick0,
