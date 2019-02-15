@@ -36,78 +36,103 @@ const checkWinner = () => {
   } else if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
     (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
     console.log('Winner!')
+    // return winner then....
   } else {
     console.log('still playing')
   }
 }
-
-// const checkSpaces = () => {
-//   if gameBoard[]
-// }
-
+let board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 const onClick0 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[0] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[0] === 0) {
+    $(event.target).text(currentPlayer)
+    board[0] += 1
+    gameBoard[0] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick1 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[1] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[1] === 0) {
+    $(event.target).text(currentPlayer)
+    board[1] += 1
+    gameBoard[1] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick2 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[2] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[2] === 0) {
+    $(event.target).text(currentPlayer)
+    board[2] += 1
+    gameBoard[2] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
+
 const onClick3 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[3] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[3] === 0) {
+    $(event.target).text(currentPlayer)
+    board[3] += 1
+    gameBoard[3] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick4 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[4] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[4] === 0) {
+    $(event.target).text(currentPlayer)
+    board[4] += 1
+    gameBoard[4] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick5 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[5] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[5] === 0) {
+    $(event.target).text(currentPlayer)
+    board[5] += 1
+    gameBoard[5] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick6 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[6] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[6] === 0) {
+    $(event.target).text(currentPlayer)
+    board[6] += 1
+    gameBoard[6] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick7 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[7] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[7] === 0) {
+    $(event.target).text(currentPlayer)
+    board[7] += 1
+    gameBoard[7] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 const onClick8 = event => {
-  $(event.target).text(currentPlayer)
-  gameBoard[8] = currentPlayer
-  takeTurn()
-  checkWinner()
-  console.log(gameBoard)
+  if (board[8] === 0) {
+    $(event.target).text(currentPlayer)
+    board[8] += 1
+    gameBoard[8] = currentPlayer
+    takeTurn()
+    checkWinner()
+    console.log(gameBoard)
+  }
 }
 
 module.exports = {
