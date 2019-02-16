@@ -1,8 +1,9 @@
 const ui = require('./ui.js')
-
+// creates game board
 const gameBoard = ['', '', '', '', '', '', '', '', '']
-let currentPlayer = 'X'
 
+let currentPlayer = 'X'
+// switches current player between x and o
 const takeTurn = () => {
   if (currentPlayer === 'X') {
     currentPlayer = 'O'
@@ -11,46 +12,85 @@ const takeTurn = () => {
   }
   return currentPlayer
 }
+// checks for winning combinations
+// const checkWinner = () => {
+//   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
+//     (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
+//     (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') ||
+//     (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') ||
+//     (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') ||
+//     (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') ||
+//     (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') ||
+//     (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
+//     console.log('Winner!')
+//   } else if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
+//     (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
+//     console.log('Winner!')
+//     // return winner then....
+//   } else {
+//     console.log('still playing')
+//   }
+// }
 
 const checkWinner = () => {
-  if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
-    (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
-    (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') ||
-    (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') ||
-    (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') ||
-    (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') ||
-    (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') ||
-    (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
-    console.log('Winner!')
-  } else if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
-    (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
-    console.log('Winner!')
+  if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
+    return ui.displayWinnerO()
+  } else if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X')) {
+    return ui.displayWinnerX()
+  } else if ((gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
+    return ui.displayWinnerO()
     // return winner then....
   } else {
     console.log('still playing')
   }
 }
-// const dubClickError = () => {
-//   if (gameBoard[0] !== '') {
-//     console.log('error')
-//   }
-// }
 
-
+// created board array to keep track of clicks
 let board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
+// click variables keep track of first clicks
+// if statement checks if click has occured on space, then
+// add click to counter, if it has already been clicked and value is set
+// to 1 on click, runs dubClickError function to display error message.
+// if no clicks have occured, and value is 0, it runs takeTurn and checkWinner
 const onClick0 = event => {
   if (board[0] === 0) {
     $(event.target).text(currentPlayer)

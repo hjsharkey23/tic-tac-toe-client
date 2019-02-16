@@ -1,12 +1,22 @@
-
+// create function to display error messages, passed to events.js
 const dubClickError = () => {
-  $('#double-click').text('Error, space is taken!')
+  $('#user-message').text('Error, space is taken!')
   setTimeout(() => {
-    $('#double-click').text('')
-    $('#double-click').removeClass('Error, space is taken!')
+    $('#user-message').text('')
+    $('#user-message').removeClass('Error, space is taken!')
   }, 1500)
 }
 
+const displayWinnerX = () => {
+  $('#user-message').text('X wins!')
+}
+
+const displayWinnerO = () => {
+  $('#user-message').text('O wins!')
+}
+
 module.exports = {
-  dubClickError
+  dubClickError,
+  displayWinnerX,
+  displayWinnerO
 }
