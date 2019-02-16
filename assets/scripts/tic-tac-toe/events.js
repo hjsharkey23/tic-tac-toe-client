@@ -3,6 +3,18 @@ const ui = require('./ui.js')
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 let currentPlayer = 'X'
+
+// alerts user who's turn it is
+const whichTurn = () => {
+  if (currentPlayer === 'X') {
+    return $('#user-message').text('X: it is your turn')
+  } else if (currentPlayer === 'O') {
+    return $('#user-message').text('O: it is your turn')
+  }
+}
+// displays turn before anything happens: default is 'X '
+whichTurn()
+
 // switches current player between x and o
 const takeTurn = () => {
   if (currentPlayer === 'X') {
@@ -12,39 +24,11 @@ const takeTurn = () => {
   }
   return currentPlayer
 }
-// checks for winning combinations
-// const checkWinner = () => {
-//   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
-//     (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
-//     (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') ||
-//     (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') ||
-//     (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') ||
-//     (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') ||
-//     (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') ||
-//     (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
-//     console.log('Winner!')
-//   } else if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
-//     (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
-//     console.log('Winner!')
-//     // return winner then....
-//   } else {
-//     console.log('still playing')
-//   }
-// }
 
+// checks who the winner is, keeps track of whichTurn and runs displayWinnerO,
+// or displayWinnerX if conditions are met
 const checkWinner = () => {
+  whichTurn()
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X')) {
     return ui.displayWinnerX()
   } else if ((gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
