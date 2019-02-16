@@ -1,12 +1,13 @@
+const ui = require('./ui.js')
 
 const gameBoard = ['', '', '', '', '', '', '', '', '']
-let currentPlayer = 'O'
+let currentPlayer = 'X'
 
 const takeTurn = () => {
-  if (currentPlayer === 'O') {
-    currentPlayer = 'X'
-  } else {
+  if (currentPlayer === 'X') {
     currentPlayer = 'O'
+  } else {
+    currentPlayer = 'X'
   }
   return currentPlayer
 }
@@ -41,6 +42,13 @@ const checkWinner = () => {
     console.log('still playing')
   }
 }
+// const dubClickError = () => {
+//   if (gameBoard[0] !== '') {
+//     console.log('error')
+//   }
+// }
+
+
 let board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 const onClick0 = event => {
@@ -51,6 +59,8 @@ const onClick0 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[0] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick1 = event => {
@@ -61,6 +71,8 @@ const onClick1 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[1] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick2 = event => {
@@ -71,6 +83,8 @@ const onClick2 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[2] === 1) {
+    ui.dubClickError()
   }
 }
 
@@ -82,6 +96,8 @@ const onClick3 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[3] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick4 = event => {
@@ -92,6 +108,8 @@ const onClick4 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[4] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick5 = event => {
@@ -102,6 +120,8 @@ const onClick5 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[5] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick6 = event => {
@@ -112,6 +132,8 @@ const onClick6 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[6] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick7 = event => {
@@ -122,6 +144,8 @@ const onClick7 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[7] === 1) {
+    ui.dubClickError()
   }
 }
 const onClick8 = event => {
@@ -132,6 +156,8 @@ const onClick8 = event => {
     takeTurn()
     checkWinner()
     console.log(gameBoard)
+  } else if (board[8] === 1) {
+    ui.dubClickError()
   }
 }
 
