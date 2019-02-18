@@ -135,7 +135,8 @@ const onClick0 = event => {
   if (gameOver() === true &&
     board[0] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[0] === 0) {
     ui.gameIsDraw()
   } else if (board[0] === 0) {
     $(event.target).text(currentPlayer)
@@ -155,7 +156,8 @@ const onClick1 = event => {
   if (gameOver() === true &&
     board[1] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[1] === 0) {
     ui.gameIsDraw()
   } else if (board[1] === 0) {
     $(event.target).text(currentPlayer)
@@ -175,7 +177,8 @@ const onClick2 = event => {
   if (gameOver() === true &&
     board[2] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[2] === 0) {
     ui.gameIsDraw()
   } else if (board[2] === 0) {
     $(event.target).text(currentPlayer)
@@ -196,7 +199,8 @@ const onClick3 = event => {
   if (gameOver() === true &&
     board[3] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[3] === 0) {
     ui.gameIsDraw()
   } else if (board[3] === 0) {
     $(event.target).text(currentPlayer)
@@ -216,7 +220,8 @@ const onClick4 = event => {
   if (gameOver() === true &&
     board[4] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[4] === 0) {
     ui.gameIsDraw()
   } else if (board[4] === 0) {
     $(event.target).text(currentPlayer)
@@ -236,7 +241,8 @@ const onClick5 = event => {
   if (gameOver() === true &&
     board[5] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[5] === 0) {
     ui.gameIsDraw()
   } else if (board[5] === 0) {
     $(event.target).text(currentPlayer)
@@ -256,7 +262,8 @@ const onClick6 = event => {
   if (gameOver() === true &&
     board[6] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[6] === 0) {
     ui.gameIsDraw()
   } else if (board[6] === 0) {
     $(event.target).text(currentPlayer)
@@ -276,7 +283,8 @@ const onClick7 = event => {
   if (gameOver() === true &&
     board[7] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[7] === 0) {
     ui.gameIsDraw()
   } else if (board[7] === 0) {
     $(event.target).text(currentPlayer)
@@ -296,7 +304,8 @@ const onClick8 = event => {
   if (gameOver() === true &&
     board[8] === 0) {
     gameOverError()
-  } else if (gameBoard.includes('') === false && gameOver() === true) {
+  } else if (gameBoard.includes('') === false && gameOver() === true &&
+    board[8] === 0) {
     ui.gameIsDraw()
   } else if (board[8] === 0) {
     $(event.target).text(currentPlayer)
