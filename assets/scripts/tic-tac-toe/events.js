@@ -37,26 +37,26 @@ const gameOverError = () => {
   ui.gameIsOver()
 }
 
-const draw = () => {
-  if (gameBoard.includes('') === false) {
-    console.log('draw!')
-  }
-}
+// const draw = () => {
+//   if (gameBoard.includes('') === false) {
+//     console.log('draw!')
+//   }
+// }
 
 // checks who the winner is, keeps track of whichTurn and runs displayWinnerO,
 // or displayWinnerX if conditions are met
 const checkWinner = () => {
   whichTurn()
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X')) {
-    return ui.displayWinnerX()
+    ui.displayWinnerX()
   } else if ((gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
-    return ui.displayWinnerO()
+    ui.displayWinnerO()
   } else if ((gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X')) {
-    return ui.displayWinnerX()
+    ui.displayWinnerX()
   } else if ((gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O')) {
-    return ui.displayWinnerO()
+    ui.displayWinnerO()
   } else if ((gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X')) {
-    return ui.displayWinnerX()
+    ui.displayWinnerX()
   } else if ((gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
     ui.displayWinnerO()
   } else if ((gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
@@ -79,14 +79,14 @@ const checkWinner = () => {
     ui.displayWinnerX()
   } else if ((gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
     ui.displayWinnerO()
-  } else {
-    console.log('still playing')
+  } else if (gameBoard.includes('') === false) {
+    ui.gameIsDraw()
   }
 }
 
 const gameOver = () => {
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X')) {
-    console.log('hello')
+    return true
   } else if ((gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O')) {
     return true
   } else if ((gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X')) {
@@ -116,6 +116,8 @@ const gameOver = () => {
   } else if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X')) {
     return true
   } else if ((gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O')) {
+    return true
+  } else if (gameBoard.includes('') === false) {
     return true
   } else {
     return false
@@ -133,6 +135,8 @@ const onClick0 = event => {
   if (gameOver() === true &&
     board[0] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[0] === 0) {
     $(event.target).text(currentPlayer)
     board[0] += 1
@@ -151,6 +155,8 @@ const onClick1 = event => {
   if (gameOver() === true &&
     board[1] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[1] === 0) {
     $(event.target).text(currentPlayer)
     board[1] += 1
@@ -169,6 +175,8 @@ const onClick2 = event => {
   if (gameOver() === true &&
     board[2] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[2] === 0) {
     $(event.target).text(currentPlayer)
     board[2] += 1
@@ -188,6 +196,8 @@ const onClick3 = event => {
   if (gameOver() === true &&
     board[3] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[3] === 0) {
     $(event.target).text(currentPlayer)
     board[3] += 1
@@ -206,6 +216,8 @@ const onClick4 = event => {
   if (gameOver() === true &&
     board[4] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[4] === 0) {
     $(event.target).text(currentPlayer)
     board[4] += 1
@@ -224,6 +236,8 @@ const onClick5 = event => {
   if (gameOver() === true &&
     board[5] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[5] === 0) {
     $(event.target).text(currentPlayer)
     board[5] += 1
@@ -242,6 +256,8 @@ const onClick6 = event => {
   if (gameOver() === true &&
     board[6] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[6] === 0) {
     $(event.target).text(currentPlayer)
     board[6] += 1
@@ -260,6 +276,8 @@ const onClick7 = event => {
   if (gameOver() === true &&
     board[7] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[7] === 0) {
     $(event.target).text(currentPlayer)
     board[7] += 1
@@ -278,6 +296,8 @@ const onClick8 = event => {
   if (gameOver() === true &&
     board[8] === 0) {
     gameOverError()
+  } else if (gameBoard.includes('') === false && gameOver() === true) {
+    ui.gameIsDraw()
   } else if (board[8] === 0) {
     $(event.target).text(currentPlayer)
     board[8] += 1

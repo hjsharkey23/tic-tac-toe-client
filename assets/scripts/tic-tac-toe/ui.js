@@ -8,19 +8,24 @@
 // }
 
 const displayWinnerX = () => {
-  $('#user-message').text('X wins!')
+  $('#user-message').text('X wins! Please reset the board!')
 }
 
 const displayWinnerO = () => {
-  $('#user-message').text('O wins!')
+  $('#user-message').text('O wins! Please reset the board!')
 }
 
 const gameIsOver = () => {
   $('#user-message').text('Game is over, please reset the board!')
 }
 
+const gameIsDraw = () => {
+  $('#user-message').text('Draw! Please reset the board!')
+}
+
 module.exports = {
   displayWinnerX,
   displayWinnerO,
-  gameIsOver
+  gameIsOver,
+  gameIsDraw
 }
