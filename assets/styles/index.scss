@@ -1,12 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
 
+.row {
+  text-align: center;
+}
 
-// .row {
-//   background-color: green;
-//   border: 1px solid black;
-//   display: flex;
-//
-// }
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#center-button {
+  text-align: center;
+}
+
+.container {
+
+}
 
 .box {
   align-items: center;
@@ -17,8 +29,4 @@
   height: 80px;
   justify-content: center;
 
-}
-
-.box#button {
-  background-color: yellow;
 }
