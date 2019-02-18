@@ -2,6 +2,7 @@
 
 // use require with a reference to bundle the file and use it in this file
 const events = require('./tic-tac-toe/events.js')
+const authEvents = require('./auth/events-auth.js')
 //
 // // use require without a reference to ensure a file is bundled
 // // require('./example')
@@ -17,4 +18,5 @@ $(() => {
   $('#box7').on('click', events.onClick7)
   $('#box8').on('click', events.onClick8)
   $('#reset').on('click', events.resetBoard)
+  authEvents.addHandlers()
 })
