@@ -1,6 +1,6 @@
 const ui = require('./ui.js')
 // creates game board
-const gameBoard = ['', '', '', '', '', '', '', '', '']
+let gameBoard = ['', '', '', '', '', '', '', '', '']
 
 let currentPlayer = 'X'
 
@@ -322,6 +322,23 @@ const onClick8 = event => {
   }
 }
 
+const resetBoard = () => {
+  $('.box').text('')
+  currentPlayer = 'X'
+  whichTurn()
+  board[0] = 0
+  board[1] = 0
+  board[2] = 0
+  board[3] = 0
+  board[4] = 0
+  board[5] = 0
+  board[6] = 0
+  board[7] = 0
+  board[8] = 0
+  board[9] = 0
+  gameBoard = ['', '', '', '', '', '', '', '', '']
+}
+
 module.exports = {
   onClick0,
   onClick1,
@@ -331,5 +348,6 @@ module.exports = {
   onClick5,
   onClick6,
   onClick7,
-  onClick8
+  onClick8,
+  resetBoard
 }
