@@ -44,13 +44,29 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+const onCreateGame = function (event) {
+  event.preventDefault()
+  console.log('create game ran!')
+  const formData = {}
+  api.create(formData)
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+}
+
+// const onUpdateGame = function () {
+//   event.preventDefault()
+//   console.log('move updated!')
+//   api.updateGame()
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#create-game-button').on('submit', onCreateGame)
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onCreateGame
 }

@@ -1,4 +1,5 @@
 const ui = require('./ui.js')
+const api = require('../auth/api-auth.js')
 // creates game board
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 
@@ -141,6 +142,7 @@ const onClick0 = event => {
   } else if (board[0] === 0) {
     $(event.target).text(currentPlayer)
     board[0] += 1
+    api.updateGame(0, currentPlayer, gameOver())
     gameBoard[0] = currentPlayer
     takeTurn()
     checkWinner()
@@ -162,6 +164,7 @@ const onClick1 = event => {
   } else if (board[1] === 0) {
     $(event.target).text(currentPlayer)
     board[1] += 1
+    api.updateGame(1, currentPlayer, gameOver())
     gameBoard[1] = currentPlayer
     takeTurn()
     checkWinner()
@@ -183,6 +186,7 @@ const onClick2 = event => {
   } else if (board[2] === 0) {
     $(event.target).text(currentPlayer)
     board[2] += 1
+    api.updateGame(2, currentPlayer, gameOver())
     gameBoard[2] = currentPlayer
     takeTurn()
     checkWinner()
@@ -205,6 +209,7 @@ const onClick3 = event => {
   } else if (board[3] === 0) {
     $(event.target).text(currentPlayer)
     board[3] += 1
+    api.updateGame(3, currentPlayer, gameOver())
     gameBoard[3] = currentPlayer
     takeTurn()
     checkWinner()
@@ -226,6 +231,7 @@ const onClick4 = event => {
   } else if (board[4] === 0) {
     $(event.target).text(currentPlayer)
     board[4] += 1
+    api.updateGame(4, currentPlayer, gameOver())
     gameBoard[4] = currentPlayer
     takeTurn()
     checkWinner()
@@ -247,6 +253,10 @@ const onClick5 = event => {
   } else if (board[5] === 0) {
     $(event.target).text(currentPlayer)
     board[5] += 1
+    api.updateGame(5, currentPlayer, gameOver())
+      .then(data => {
+        console.log(data)
+      })
     gameBoard[5] = currentPlayer
     takeTurn()
     checkWinner()
@@ -268,6 +278,7 @@ const onClick6 = event => {
   } else if (board[6] === 0) {
     $(event.target).text(currentPlayer)
     board[6] += 1
+    api.updateGame(6, currentPlayer, gameOver())
     gameBoard[6] = currentPlayer
     takeTurn()
     checkWinner()
@@ -289,6 +300,7 @@ const onClick7 = event => {
   } else if (board[7] === 0) {
     $(event.target).text(currentPlayer)
     board[7] += 1
+    api.updateGame(7, currentPlayer, gameOver())
     gameBoard[7] = currentPlayer
     takeTurn()
     checkWinner()
@@ -310,6 +322,7 @@ const onClick8 = event => {
   } else if (board[8] === 0) {
     $(event.target).text(currentPlayer)
     board[8] += 1
+    api.updateGame(8, currentPlayer, gameOver())
     gameBoard[8] = currentPlayer
     takeTurn()
     checkWinner()

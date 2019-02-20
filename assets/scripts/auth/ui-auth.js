@@ -76,6 +76,15 @@ const changePasswordFailure = function () {
   $('input').trigger('reset')
   // console.error('changePasswordFailure ran. Error is :', error)
 }
+const createGameSuccess = function (data) {
+  console.log('response from creating game is', data)
+  $('#message').text('Game created successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('form').trigger('reset')
+  $('input').trigger('reset')
+  store.game = data.game
+}
 
 module.exports = {
   signUpSuccess,
@@ -85,5 +94,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  createGameSuccess
 }
