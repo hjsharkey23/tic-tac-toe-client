@@ -53,10 +53,12 @@ const onCreateGame = function (event) {
     .catch(ui.createGameFailure)
 }
 
-// const onUpdateGame = function () {
-//   event.preventDefault()
-//   console.log('move updated!')
-//   api.updateGame()
+const onGetGames = function (event) {
+  event.preventDefault()
+  api.index()
+    .then(ui.onIndexSuccess)
+    .catch(ui.onError)
+}
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
@@ -64,6 +66,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#create-game-button').on('submit', onCreateGame)
+  $('#get-games-button').on('submit', onGetGames)
 }
 
 module.exports = {

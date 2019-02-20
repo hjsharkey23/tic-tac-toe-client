@@ -8,7 +8,6 @@ const signUpSuccess = function (data) {
   $('#message').addClass('success')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.log('signUpSuccess ran. Data is :', data)
 }
 
 const signUpFailure = function () {
@@ -17,7 +16,6 @@ const signUpFailure = function () {
   $('#message').addClass('failure')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.error('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = function (data) {
@@ -26,7 +24,6 @@ const signInSuccess = function (data) {
   $('#message').addClass('success')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.log('signInSuccess ran. Data is :', data)
   store.user = data.user
 }
 
@@ -36,7 +33,6 @@ const signInFailure = function () {
   $('#message').addClass('failure')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.error('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = function () {
@@ -46,7 +42,6 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
 }
 
@@ -77,13 +72,16 @@ const changePasswordFailure = function () {
   // console.error('changePasswordFailure ran. Error is :', error)
 }
 const createGameSuccess = function (data) {
-  console.log('response from creating game is', data)
   $('#message').text('Game created successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
   $('input').trigger('reset')
   store.game = data.game
+}
+
+const onIndexSuccess = function (responseData) {
+  $('#games-display').html(`Total Games Played: ${responseData.games.length}`)
 }
 
 module.exports = {
@@ -95,5 +93,6 @@ module.exports = {
   signOutFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  createGameSuccess
+  createGameSuccess,
+  onIndexSuccess
 }
