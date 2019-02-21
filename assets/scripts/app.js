@@ -17,6 +17,6 @@ $(() => {
   $('#box6').on('click', events.onClick6)
   $('#box7').on('click', events.onClick7)
   $('#box8').on('click', events.onClick8)
-  $('#reset').on('click', events.resetBoard)
+  $('#create-game-button').on('submit', events.resetBoard)
   authEvents.addHandlers()
 })

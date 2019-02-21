@@ -1,5 +1,7 @@
 const ui = require('./ui.js')
 const api = require('../auth/api-auth.js')
+const uiAuth = require('../auth/ui-auth.js')
+// const authEvents = require('../auth/events-auth.js')
 // creates game board
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 
@@ -335,7 +337,16 @@ const onClick8 = event => {
   }
 }
 
+const onCreateGame = function () {
+  console.log('create game ran!')
+  const formData = {}
+  api.create(formData)
+    .then(uiAuth.createGameSuccess)
+    .catch(uiAuth.createGameFailure)
+}
+
 const resetBoard = () => {
+  event.preventDefault()
   $('.box').text('')
   currentPlayer = 'X'
   whichTurn()
@@ -350,6 +361,7 @@ const resetBoard = () => {
   board[8] = 0
   board[9] = 0
   gameBoard = ['', '', '', '', '', '', '', '', '']
+  onCreateGame()
 }
 
 module.exports = {

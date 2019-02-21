@@ -44,14 +44,14 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
-const onCreateGame = function (event) {
-  event.preventDefault()
-  console.log('create game ran!')
-  const formData = {}
-  api.create(formData)
-    .then(ui.createGameSuccess)
-    .catch(ui.createGameFailure)
-}
+// const onCreateGame = function (event) {
+//   event.preventDefault()
+//   console.log('create game ran!')
+//   const formData = {}
+//   api.create(formData)
+//   // .then(ui.createGameSuccess)
+//   // .catch(ui.createGameFailure)
+// }
 
 const onGetGames = function (event) {
   event.preventDefault()
@@ -65,11 +65,10 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-  $('#create-game-button').on('submit', onCreateGame)
   $('#get-games-button').on('submit', onGetGames)
 }
 
 module.exports = {
-  addHandlers,
-  onCreateGame
+  addHandlers
+  // onCreateGame
 }

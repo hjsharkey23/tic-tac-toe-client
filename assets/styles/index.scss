@@ -17,9 +17,40 @@ p {
 }
 
 .container {
-
+  display: none;
 }
 
+#sign-out {
+  display: none;
+  text-align: center
+}
+
+#change-password {
+  display: none;
+  text-align: center;
+}
+
+#get-games-button {
+  display: none;
+  text-align: center
+}
+
+#create-game-button {
+  display: none;
+  text-align: center;
+}
+
+#user-message {
+  display: none;
+}
+
+#sign-up {
+  text-align: center;
+}
+
+#sign-in {
+  text-align: center;
+}
 .box {
   font-size: 50px;
   align-items: center;

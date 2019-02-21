@@ -8,19 +8,21 @@
 // }
 
 const displayWinnerX = () => {
-  $('#user-message').text('X wins! Please reset the board!')
+  $('#win-message').text('X wins! Start a new game!')
+  $('#user-message').text('')
 }
 
 const displayWinnerO = () => {
-  $('#user-message').text('O wins! Please reset the board!')
+  $('#win-message').text('O wins! Start a new game!')
+  $('#user-message').text('')
 }
 
 const gameIsOver = () => {
-  $('#user-message').text('Game is over, please reset the board!')
+  $('#user-message').text('Game is over. Start a new game!')
 }
 
 const gameIsDraw = () => {
-  $('#user-message').text('Draw! Please reset the board!')
+  $('#user-message').text('Draw! Start a new game!')
 }
 
 module.exports = {

@@ -24,7 +24,16 @@ const signInSuccess = function (data) {
   $('#message').addClass('success')
   $('form').trigger('reset')
   $('input').trigger('reset')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 3000)
   store.user = data.user
+  $('#sign-out').show()
+  $('#change-password').show()
+  $('#get-games-button').show()
+  $('#create-game-button').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
 }
 
 const signInFailure = function () {
@@ -42,6 +51,16 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
   $('form').trigger('reset')
   $('input').trigger('reset')
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#change-password').hide()
+  $('#get-games-button').hide()
+  $('#create-game-button').hide()
+  $('#user-message').hide()
+  $('#sign-in').hide()
+  $('.container').hide()
+  $('#sign-up').show()
+  $('#sign-in').show()
   store.user = null
 }
 
@@ -51,7 +70,6 @@ const signOutFailure = function () {
   $('#message').addClass('failure')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.error('signOutFailure ran. Error is :', error)
 }
 
 const changePasswordSuccess = function () {
@@ -60,7 +78,9 @@ const changePasswordSuccess = function () {
   $('#message').addClass('success')
   $('form').trigger('reset')
   $('input').trigger('reset')
-  // console.log('changePasswordSuccess ran and nothing was returned!')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 3000)
 }
 
 const changePasswordFailure = function () {
@@ -72,11 +92,9 @@ const changePasswordFailure = function () {
   // console.error('changePasswordFailure ran. Error is :', error)
 }
 const createGameSuccess = function (data) {
-  $('#message').text('Game created successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('form').trigger('reset')
-  $('input').trigger('reset')
+  $('.container').show()
+  $('#user-message').show()
+  $('#win-message').text('')
   store.game = data.game
 }
 
