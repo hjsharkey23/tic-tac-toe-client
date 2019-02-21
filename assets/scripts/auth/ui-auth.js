@@ -34,6 +34,7 @@ const signInSuccess = function (data) {
   $('#create-game-button').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#games-display').show()
 }
 
 const signInFailure = function () {
@@ -62,6 +63,10 @@ const signOutSuccess = function () {
   $('#win-message').hide()
   $('#sign-up').show()
   $('#sign-in').show()
+  $('#games-display').hide()
+  setTimeout(() => {
+    $('#message').text('')
+  }, 2000)
   store.user = null
 }
 
