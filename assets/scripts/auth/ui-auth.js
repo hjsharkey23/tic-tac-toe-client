@@ -59,6 +59,7 @@ const signOutSuccess = function () {
   $('#user-message').hide()
   $('#sign-in').hide()
   $('.container').hide()
+  $('#win-message').hide()
   $('#sign-up').show()
   $('#sign-in').show()
   store.user = null
@@ -100,6 +101,9 @@ const createGameSuccess = function (data) {
 
 const onIndexSuccess = function (responseData) {
   $('#games-display').html(`Total Games Played: ${responseData.games.length}`)
+  setTimeout(() => {
+    $('#games-display').text('')
+  }, 5000)
 }
 
 module.exports = {
