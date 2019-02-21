@@ -248,7 +248,6 @@ const onClick5 = event => {
     gameBoard[5] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[5] === 1 &&
     gameOver() === true) {
     gameOverError()
