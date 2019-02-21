@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Signed up successfully')
+  $('#message').text('Signed up successfully, please sign in!')
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
@@ -11,7 +11,7 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function () {
-  $('#message').text('Error on sign up')
+  $('#message').text('Error on sign up, try again.')
   $('#message').removeClass()
   $('#message').addClass('failure')
   $('form').trigger('reset')
@@ -37,7 +37,7 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function () {
-  $('#message').text('Error on sign in')
+  $('#message').text('Error on sign in, try again.')
   $('#message').removeClass()
   $('#message').addClass('failure')
   $('form').trigger('reset')

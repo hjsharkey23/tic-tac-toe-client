@@ -40,12 +40,6 @@ const gameOverError = () => {
   ui.gameIsOver()
 }
 
-// const draw = () => {
-//   if (gameBoard.includes('') === false) {
-//     console.log('draw!')
-//   }
-// }
-
 // checks who the winner is, keeps track of whichTurn and runs displayWinnerO,
 // or displayWinnerX if conditions are met
 const checkWinner = () => {
@@ -148,7 +142,6 @@ const onClick0 = event => {
     gameBoard[0] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[0] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -170,7 +163,6 @@ const onClick1 = event => {
     gameBoard[1] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[1] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -192,7 +184,6 @@ const onClick2 = event => {
     gameBoard[2] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[2] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -215,7 +206,6 @@ const onClick3 = event => {
     gameBoard[3] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[3] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -237,7 +227,6 @@ const onClick4 = event => {
     gameBoard[4] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[4] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -256,9 +245,6 @@ const onClick5 = event => {
     $(event.target).text(currentPlayer)
     board[5] += 1
     api.updateGame(5, currentPlayer, gameOver())
-      .then(data => {
-        console.log(data)
-      })
     gameBoard[5] = currentPlayer
     takeTurn()
     checkWinner()
@@ -284,7 +270,6 @@ const onClick6 = event => {
     gameBoard[6] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[6] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -306,7 +291,6 @@ const onClick7 = event => {
     gameBoard[7] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[7] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -328,7 +312,6 @@ const onClick8 = event => {
     gameBoard[8] = currentPlayer
     takeTurn()
     checkWinner()
-    console.log(gameBoard)
   } else if (board[8] === 1 &&
     gameOver() === true) {
     gameOverError()
@@ -338,7 +321,6 @@ const onClick8 = event => {
 }
 
 const onCreateGame = function () {
-  console.log('create game ran!')
   const formData = {}
   api.create(formData)
     .then(uiAuth.createGameSuccess)
